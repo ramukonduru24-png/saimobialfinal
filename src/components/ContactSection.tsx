@@ -49,10 +49,9 @@ const ContactSection = () => {
                   <div>
                     <p className="font-medium text-foreground">Address</p>
                     <p className="text-muted-foreground">
-                      Mobile Market Center, Main Road<br />
-                      Opp. City Mall<br />
-                      Suryanarayana Puram, Kakinada<br />
-                      Andhra Pradesh 533001
+                      KG Road, SVS Nagar, 1st line<br />
+                      Doranala, Ayinamukkala<br />
+                      Andhra Pradesh 523331
                     </p>
                   </div>
                 </div>
@@ -63,8 +62,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
-                    <a href="tel:07799644700" className="text-muted-foreground hover:text-primary transition-colors">
-                      077996 44700
+                    <a href="tel:09110723175" className="text-muted-foreground hover:text-primary transition-colors">
+                      09110 723175
                     </a>
                   </div>
                 </div>

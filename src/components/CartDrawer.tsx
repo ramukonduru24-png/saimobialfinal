@@ -8,15 +8,15 @@ const CartDrawer = () => {
   const { items, removeItem, updateQuantity, totalItems, totalPrice } = useCart();
 
   const handleCheckout = () => {
-    const phoneNumber = "07799644700";
-    const orderDetails = items.map(item => 
+    const phoneNumber = "919110723175";
+    const orderDetails = items.map(item =>
       `${item.quantity}x ${item.title} - ₹${(item.price * item.quantity).toLocaleString()}`
     ).join('\n');
-    
+
     const message = encodeURIComponent(
-      `*New Order from SVJ Website*\n\n${orderDetails}\n\n*Total: ₹${totalPrice.toLocaleString()}*\n\nPlease confirm availability and pricing.`
+      `*New Order from Siva Sai Cellpoint Website*\n\n${orderDetails}\n\n*Total: ₹${totalPrice.toLocaleString()}*\n\nPlease confirm availability and pricing.`
     );
-    
+
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
@@ -36,7 +36,7 @@ const CartDrawer = () => {
         <SheetHeader>
           <SheetTitle>Shopping Cart ({totalItems} items)</SheetTitle>
         </SheetHeader>
-        
+
         <div className="mt-8 space-y-4">
           {items.length === 0 ? (
             <p className="text-center text-muted-foreground py-8">Your cart is empty</p>
@@ -49,26 +49,26 @@ const CartDrawer = () => {
                     <h4 className="font-semibold text-sm">{item.title}</h4>
                     <p className="text-primary font-semibold mt-1">₹{item.price.toLocaleString()}</p>
                     <div className="flex items-center gap-2 mt-2">
-                      <Button 
-                        size="icon" 
-                        variant="outline" 
+                      <Button
+                        size="icon"
+                        variant="outline"
                         className="h-7 w-7"
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
                       >
                         <Minus className="h-3 w-3" />
                       </Button>
                       <span className="w-8 text-center">{item.quantity}</span>
-                      <Button 
-                        size="icon" 
-                        variant="outline" 
+                      <Button
+                        size="icon"
+                        variant="outline"
                         className="h-7 w-7"
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
                       >
                         <Plus className="h-3 w-3" />
                       </Button>
-                      <Button 
-                        size="icon" 
-                        variant="ghost" 
+                      <Button
+                        size="icon"
+                        variant="ghost"
                         className="h-7 w-7 ml-auto text-destructive"
                         onClick={() => removeItem(item.id)}
                       >
@@ -78,7 +78,7 @@ const CartDrawer = () => {
                   </div>
                 </div>
               ))}
-              
+
               <div className="pt-4 space-y-4">
                 <div className="flex justify-between text-lg font-bold">
                   <span>Total:</span>

@@ -30,6 +30,8 @@ import trendEarbuds from "@/assets/trend-demi.jpg";
 import trendWatches from "@/assets/trend-choker.jpg";
 import trendPowerbanks from "@/assets/trend-temple.jpg";
 
+
+
 const Index = () => {
   const arrivals = [
     { id: "arr1", image: arrival1, title: "iPhone 15 Pro Max", description: "Space Black, 256GB", price: 134900 },

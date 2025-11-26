@@ -16,12 +16,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const categories = [
-    { name: "iPhones", href: "/necklaces" },
-    { name: "Android Mobiles", href: "/earrings" },
-    { name: "Cases & Pouches", href: "/bangles" },
-    { name: "Chargers", href: "/rings" },
-    { name: "Earphones", href: "/bridal-sets" },
-    { name: "Accessories", href: "/chains" },
+    { name: "iPhones", href: "/iphones" },
+    { name: "Android Mobiles", href: "/android" },
+    { name: "Cases & Pouches", href: "/cases" },
+    { name: "Chargers", href: "/chargers" },
+    { name: "Earphones", href: "/audio" },
+    { name: "Accessories", href: "/accessories" },
   ];
 
   return (
@@ -95,13 +95,13 @@ const Header = () => {
           {/* Right Side Actions */}
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-4">
-              <a href="tel:07799644700" className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors">
+              <a href="tel:09110723175" className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors">
                 <Phone className="h-4 w-4" />
-                <span className="hidden xl:inline">077996 44700</span>
+                <span className="hidden xl:inline">09110 723175</span>
               </a>
               <a href="#contact" className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors">
                 <MapPin className="h-4 w-4" />
-                <span className="hidden xl:inline">Kakinada, AP</span>
+                <span className="hidden xl:inline">Ayinamukkala, AP</span>
               </a>
             </div>
             <CartDrawer />
