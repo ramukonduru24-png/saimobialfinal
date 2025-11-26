@@ -37,41 +37,41 @@ const ProductCard = ({ id, image, title, description, price }: ProductCardProps)
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
       </div>
-      
+
       <div className="p-4 space-y-3">
         <h3 className="font-heading text-lg font-semibold">{title}</h3>
         {description && (
           <p className="text-sm text-muted-foreground">{description}</p>
         )}
         <p className="text-2xl font-bold text-primary">₹{price.toLocaleString()}</p>
-        
+
         <div className="flex items-center gap-2">
           <div className="flex items-center border border-border rounded-md">
             <Button
               size="icon"
               variant="ghost"
-              className="h-9 w-9"
+              className="h-8 w-8 md:h-9 md:w-9"
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
             >
-              <Minus className="h-4 w-4" />
+              <Minus className="h-3 w-3 md:h-4 md:w-4" />
             </Button>
-            <span className="w-12 text-center font-semibold">{quantity}</span>
+            <span className="w-8 md:w-12 text-center font-semibold text-sm md:text-base">{quantity}</span>
             <Button
               size="icon"
               variant="ghost"
-              className="h-9 w-9"
+              className="h-8 w-8 md:h-9 md:w-9"
               onClick={() => setQuantity(quantity + 1)}
             >
-              <Plus className="h-4 w-4" />
+              <Plus className="h-3 w-3 md:h-4 md:w-4" />
             </Button>
           </div>
-          
-          <Button 
-            className="flex-1" 
+
+          <Button
+            className="flex-1 px-0 md:px-4"
             onClick={handleAddToCart}
           >
-            <ShoppingCart className="h-4 w-4 mr-2" />
-            Add to Cart
+            <ShoppingCart className="h-4 w-4 md:mr-2" />
+            <span className="hidden md:inline">Add to Cart</span>
           </Button>
         </div>
       </div>
